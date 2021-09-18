@@ -1,0 +1,12 @@
+= 基于文件的动态配置注入器
+:sectnums:
+:hardbreaks:
+:source-highlighter: pygments
+:toc:
+:toclevels: 5
+
+== 简介
+
+指定本地配置文件，服务启动的时候读取并解析指定的文件生成服务需要的配置，当服务运行时文件发生了变化后，生成相应的事件并实时刷新内存里的配置值。
+
+link:README.adoc[English]

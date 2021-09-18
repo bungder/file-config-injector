@@ -1,0 +1,12 @@
+= File-Based Dynamic Config Injector
+:sectnums:
+:hardbreaks:
+:source-highlighter: pygments
+:toc:
+:toclevels: 5
+
+== Introduction
+
+Using local config file, generate events and refresh config value in memory in real-time when file changed.
+
+link:README_zh.adoc[Chinese]

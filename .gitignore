@@ -1,0 +1,49 @@
+*/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+*.DS_Store
+logs/
+*.log
+*.log.*
+*.gz
+*/test/config/
+
+generatorConfig.xml
+
+target
+
+arthas-output/
+
+doas-for-mac*
+kmsuser.txt
+
+/.gradle/
+*.swp
+### VS Code ###
+.vscode/
+
+###mac ###
+*.DS_Store
+.flattened-pom.xml
