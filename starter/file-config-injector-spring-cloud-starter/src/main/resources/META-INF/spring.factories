@@ -1,0 +1,2 @@
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+  io.github.bugnder.fci.spring.cloud.config.FileConfigInjectorSpringCloudAutoConfig
