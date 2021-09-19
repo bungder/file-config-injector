@@ -6,11 +6,13 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
  * @author bungder
  */
+@Slf4j
 @Service
 public class LoopService {
 
@@ -20,7 +22,7 @@ public class LoopService {
     private ScheduledExecutorService exec = Executors.newScheduledThreadPool(2);
 
     public void doSome() {
-        springCloudYamlTestConfig.toString();
+        log.info(springCloudYamlTestConfig.toString());
     }
 
     @PostConstruct

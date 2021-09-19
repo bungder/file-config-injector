@@ -1,6 +1,7 @@
 package io.github.bungder.fci.test.spring.cloud;
 
 import com.google.common.base.Stopwatch;
+import io.github.bungder.fci.test.spring.cloud.config.SpringCloudYamlTestConfig;
 import java.util.concurrent.TimeUnit;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -17,7 +18,7 @@ import org.springframework.core.env.Environment;
  * @author bungder
  * @date 09/18/2021 5:24 PM
  */
-@EnableConfigurationProperties
+@EnableConfigurationProperties({SpringCloudYamlTestConfig.class})
 @Slf4j
 @SpringBootApplication(exclude = {
     DataSourceAutoConfiguration.class,

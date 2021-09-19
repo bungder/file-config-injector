@@ -6,19 +6,18 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.stereotype.Component;
 
 /**
  * @author bungder
  */
+
 @Slf4j
-@Data
-@Component
 @RefreshScope
+@Data
 @ConfigurationProperties(prefix = "test.spring-cloud.yaml")
 public class SpringCloudYamlTestConfig {
     private String name;
-    private long id;
+    private Long id;
     private String date;
 
     @PostConstruct

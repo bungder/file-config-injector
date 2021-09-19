@@ -88,7 +88,7 @@ public class FileWatcher implements Runnable {
                         }
                         consumer.accept(new FileChangeEvent()
                             .setTimestamp(System.currentTimeMillis())
-                            .setPath(changed.toString())
+                            .setPath(directory + File.separator + changed.toString())
                             .setSource(event));
                     }
                     // reset the key
