@@ -1,0 +1,10 @@
+test:
+  demo-yaml-file: ${user.home}/Develop/tmp/config.yml
+
+io:
+  github:
+    bungder:
+      file-config:
+        enabled: true
+        files:
+          - ${test.demo-yaml-file}

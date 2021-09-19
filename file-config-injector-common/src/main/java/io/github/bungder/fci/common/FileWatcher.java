@@ -81,7 +81,6 @@ public class FileWatcher implements Runnable {
                         //we only register "ENTRY_MODIFY" so the context is always a Path.
                         log.info("count: {}, kind: {}. context: {}", event.count(), event.kind(), event.context());
                         final Path changed = (Path) event.context();
-                        System.out.println(changed);
                         String fileName = changed.getFileName().toString();
                         Consumer<FileChangeEvent> consumer = fileEventConsumerMap.get(fileName);
                         if (consumer == null) {
@@ -89,7 +88,8 @@ public class FileWatcher implements Runnable {
                         }
                         consumer.accept(new FileChangeEvent()
                             .setTimestamp(System.currentTimeMillis())
-                            .setPath(changed.toString()));
+                            .setPath(changed.toString())
+                            .setSource(event));
                     }
                     // reset the key
                     boolean valid = wk.reset();

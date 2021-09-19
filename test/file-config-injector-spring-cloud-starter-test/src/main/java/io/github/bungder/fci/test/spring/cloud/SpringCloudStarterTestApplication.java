@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
 
@@ -16,6 +17,7 @@ import org.springframework.core.env.Environment;
  * @author bungder
  * @date 09/18/2021 5:24 PM
  */
+@EnableConfigurationProperties
 @Slf4j
 @SpringBootApplication(exclude = {
     DataSourceAutoConfiguration.class,

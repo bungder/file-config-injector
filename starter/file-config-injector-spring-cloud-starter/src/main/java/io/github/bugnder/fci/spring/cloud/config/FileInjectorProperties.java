@@ -1,11 +1,11 @@
 package io.github.bugnder.fci.spring.cloud.config;
 
 import com.google.common.base.Joiner;
-import java.util.Set;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections4.SetUtils;
+import org.apache.commons.collections4.ListUtils;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 
@@ -24,9 +24,9 @@ public class FileInjectorProperties {
      */
     private boolean enabled;
     /**
-     * file path set
+     * file path list
      */
-    private Set<String> files;
+    private List<String> files;
 
     @PostConstruct
     private void init() {
@@ -37,7 +37,7 @@ public class FileInjectorProperties {
     public String toString() {
         return "FileInjectorProperties{" +
             "enabled=" + enabled +
-            ", files=" + "[" + Joiner.on(", ").join(SetUtils.emptyIfNull(files)) + "]" +
+            ", files=" + "[" + Joiner.on(", ").join(ListUtils.emptyIfNull(files)) + "]" +
             '}';
     }
 }
