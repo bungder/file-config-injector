@@ -16,6 +16,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.cloud.bootstrap.config.PropertySourceLocator;
 import org.springframework.cloud.context.environment.EnvironmentChangeEvent;
+import org.springframework.cloud.endpoint.event.RefreshEvent;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.MapPropertySource;
@@ -82,6 +83,7 @@ public class FileSourceLocator implements PropertySourceLocator {
                         map.putAll(map2);
                         log.info("keys {} changed: {}", Joiner.on(", ").join(map2.keySet()), new Gson().toJson(map2));
                         applicationContext.publishEvent(new EnvironmentChangeEvent(map2.keySet()));
+                        applicationContext.publishEvent(new RefreshEvent(this, null, msg));
                     } catch (Throwable e) {
                         log.error("Error on reloading {}", p.getPath(), e);
                     }
